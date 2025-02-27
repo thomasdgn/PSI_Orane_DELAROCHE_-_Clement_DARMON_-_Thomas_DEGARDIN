@@ -21,7 +21,7 @@ namespace PSI
 
         }
 
-        public int Numéro
+        public int id
         {
             get
             {
@@ -51,6 +51,7 @@ namespace PSI
                 liens.Add(a);
             }
         }
+
 
     }
 }

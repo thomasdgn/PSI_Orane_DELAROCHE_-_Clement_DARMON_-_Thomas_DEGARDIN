@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace PSI
 {
@@ -17,10 +19,13 @@ namespace PSI
         {
             noeuds = new Dictionary<int, Noeud>();
         }
+        public Dictionary<int, Noeud> Noeuds => noeuds;
 
+
+        #endregion
         public Noeud AjouterNoeud(int id)
         {
-            if(!noeuds.ContainsKey(id))
+            if (!noeuds.ContainsKey(id))
             {
                 noeuds[id] = new Noeud(id);
             }
@@ -38,17 +43,24 @@ namespace PSI
 
         public void AfficherGraphe()
         {
-            foreach(var noeud in noeuds.Values)
+            foreach (var noeud in noeuds.Values)
             {
                 Console.WriteLine(noeud);
 
-                foreach(var lien in noeud.liens)
+                foreach (var lien in noeud.liens)
                 {
                     Console.WriteLine(" ");
                 }
             }
         }
-
-        #endregion
+        public void ConstruireDepuisFichier(string fichier)
+        {
+            string[] lignes = File.ReadAllLines(fichier);
+            foreach (var ligne in lignes)
+            {
+                var parties = ligne.Split(';');
+                AjouterLien(int.Parse(parties[0]), int.Parse(parties[1]), int.Parse(parties[2]));
+            }
+        }
     }
 }

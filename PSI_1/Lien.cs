@@ -1,47 +1,50 @@
-﻿using PSI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿    using PSI;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
-namespace PSI
-{
-    public class Lien
+    namespace PSI
     {
-        private Noeud Source;
-        private Noeud Destination;
-        private int Poids;
-
-        #region Propriété constructeur/lecture/écriture
-
-        public Lien(Noeud source, Noeud destination, int poids)
+        public class Lien
         {
-            this.Source = source;
-            this.Destination = destination;
-            this.Poids = poids;
-        }
-        public Noeud A
-        {
-            get
+            private Noeud Source;
+            private Noeud Destination;
+            private int Poids;
+
+            #region Propriété constructeur/lecture/écriture
+
+            public Lien(Noeud source, Noeud destination, int poids)
             {
-                return this.Source;
+                this.Source = source;
+                this.Destination = destination;
+                this.Poids = poids;
             }
-        }
-
-        public Noeud B
-        {
-            get
+            public Noeud source
             {
-                return this.Destination;
+                get
+                {
+                    return this.Source;
+                }
             }
+
+            public Noeud destination
+            {
+                get
+                {
+                    return this.Destination;
+                }
+            }
+
+            public string ToString()
+            {
+                return $"Lien entre {source.id} et {destination.id} avec poids {Poids}"; 
+            }
+
+            #endregion
+
+
         }
 
-        public string ToString()
-        {
-            return $"Lien :"; 
-        }
-
-        #endregion
     }
-}
