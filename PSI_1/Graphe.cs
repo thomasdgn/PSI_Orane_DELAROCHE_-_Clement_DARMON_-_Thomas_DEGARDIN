@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using Microsoft.Msagl.GraphViewerGdi;
+using Microsoft.Msagl.Drawing;
 
 
 namespace PSI
@@ -12,12 +16,20 @@ namespace PSI
     public class Graphe
     {
         private Dictionary<int, Noeud> noeuds;
+        private Graph graph;
+        private GViewer viewer;
 
         #region Propriété lecture/constructeur
 
-        public Graphe()
+        public Graphe(Panel panel)
         {
             noeuds = new Dictionary<int, Noeud>();
+            graph = new Graph("Graphe des adhérents");
+            viewer = new GViewer();
+
+            viewer.Graph = graph;
+            viewer.Dock = DockStyle.Fill;
+            panel.Controls.Add(viewer);
         }
         public Dictionary<int, Noeud> Noeuds => noeuds;
 
@@ -28,17 +40,20 @@ namespace PSI
             if (!noeuds.ContainsKey(id))
             {
                 noeuds[id] = new Noeud(id);
+                graph.AddNode(id.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
             }
             return noeuds[id];
         }
 
-        public void AjouterLien(int idSource, int idDestination, int poids)
+        public void AjouterLien(int idSource, int idDestination, int poids = 1)
         {
             var source = AjouterNoeud(idSource);
             var destination = AjouterNoeud(idDestination);
 
             var lien = new Lien(source, destination, poids);
             source.liens.Add(lien);
+
+            graph.AddEdge(idSource.ToString(), idDestination.ToString()).Attr.Color = Microsoft.Msagl.Drawing.Color.Gray;
         }
 
         public void AfficherGraphe()
@@ -49,18 +64,32 @@ namespace PSI
 
                 foreach (var lien in noeud.liens)
                 {
-                    Console.WriteLine(" ");
+                    Console.WriteLine("  → " + lien.destination.id);
                 }
             }
         }
         public void ConstruireDepuisFichier(string fichier)
         {
             string[] lignes = File.ReadAllLines(fichier);
+            Regex regex = new Regex(@"\((\d+),\s*(\d+)\)");
+
             foreach (var ligne in lignes)
             {
-                var parties = ligne.Split(';');
-                AjouterLien(int.Parse(parties[0]), int.Parse(parties[1]), int.Parse(parties[2]));
+                Match match = regex.Match(ligne);
+                if (match.Success)
+                {
+                    int idSource = int.Parse(match.Groups[1].Value);
+                    int idDestination = int.Parse(match.Groups[2].Value);
+
+                    AjouterLien(idSource, idDestination);
+                }
             }
+        }
+
+        public void MettreAJour()
+        {
+            viewer.Graph = graph;
+            viewer.Invalidate();
         }
     }
 }

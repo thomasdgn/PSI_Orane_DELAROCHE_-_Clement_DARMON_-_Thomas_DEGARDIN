@@ -12,7 +12,9 @@ namespace PSI
         {
             var graphe = new Graphe();
             graphe.ConstruireDepuisFichier("soc-karate (2).txt");
-            Console.WriteLine("Exemple de lien : " + graphe.Noeuds.Values.First().liens.First());
+
+            Console.WriteLine("Affichage du graphe :");
+            graphe.AfficherGraphe();
 
         }
     }
