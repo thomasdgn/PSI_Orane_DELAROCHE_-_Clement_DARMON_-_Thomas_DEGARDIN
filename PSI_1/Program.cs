@@ -11,6 +11,7 @@ namespace PSI
         static void Main(string[] args)
         {
             var graphe = new Graphe();
+
             graphe.ConstruireDepuisFichier("soc-karate (2).txt");
 
             Console.WriteLine("Affichage du graphe :");

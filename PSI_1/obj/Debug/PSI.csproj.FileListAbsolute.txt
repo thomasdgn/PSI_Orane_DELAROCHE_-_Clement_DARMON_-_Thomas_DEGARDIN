@@ -14,3 +14,10 @@ C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_D
 C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.pdb
 C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.Form1.resources
 C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.csproj.GenerateResource.cache
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.dll
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.Drawing.dll
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.xml
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.Drawing.xml
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.csproj.Up2Date

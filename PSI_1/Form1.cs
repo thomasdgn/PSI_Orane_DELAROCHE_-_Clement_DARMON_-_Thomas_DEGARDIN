@@ -18,6 +18,13 @@ namespace PSI
         {
             InitializeComponent();
 
+            // Vérifie que panelGraph est bien ajouté dans le designer
+            if (panelGraph == null)
+            {
+                MessageBox.Show("Erreur : panelGraph est introuvable. Vérifiez qu'il est bien ajouté dans le formulaire.");
+                return;
+            }
+
             // Initialisation du graphe dans le panel
             graphe = new Graphe(panelGraph);
 
@@ -26,6 +33,7 @@ namespace PSI
 
             // Mettre à jour l'affichage
             graphe.MettreAJour();
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace PSI
         private Dictionary<int, Noeud> noeuds;
         private Graph graph;
         private GViewer viewer;
+        private bool isConsoleMode;
 
         #region Propriété lecture/constructeur
 
@@ -26,10 +27,18 @@ namespace PSI
             noeuds = new Dictionary<int, Noeud>();
             graph = new Graph("Graphe des adhérents");
             viewer = new GViewer();
+            isConsoleMode = false;
 
             viewer.Graph = graph;
             viewer.Dock = DockStyle.Fill;
             panel.Controls.Add(viewer);
+        }
+
+        public Graphe()
+        {
+            noeuds = new Dictionary<int, Noeud>();
+            graph = new Graph("Graphe des adhérents");
+            isConsoleMode = true;
         }
         public Dictionary<int, Noeud> Noeuds => noeuds;
 
@@ -40,7 +49,8 @@ namespace PSI
             if (!noeuds.ContainsKey(id))
             {
                 noeuds[id] = new Noeud(id);
-                graph.AddNode(id.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                if (!isConsoleMode) // N'ajoute un nœud graphique que si ce n'est pas le mode console
+                    graph.AddNode(id.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
             }
             return noeuds[id];
         }
@@ -53,7 +63,8 @@ namespace PSI
             var lien = new Lien(source, destination, poids);
             source.liens.Add(lien);
 
-            graph.AddEdge(idSource.ToString(), idDestination.ToString()).Attr.Color = Microsoft.Msagl.Drawing.Color.Gray;
+            if (!isConsoleMode) // N'ajoute une arête graphique que si ce n'est pas le mode console
+                graph.AddEdge(idSource.ToString(), idDestination.ToString()).Attr.Color = Microsoft.Msagl.Drawing.Color.Gray;
         }
 
         public void AfficherGraphe()
@@ -88,8 +99,11 @@ namespace PSI
 
         public void MettreAJour()
         {
-            viewer.Graph = graph;
-            viewer.Invalidate();
+            if (!isConsoleMode) // Mise à jour graphique uniquement si c'est Windows Forms
+            {
+                viewer.Graph = graph;
+                viewer.Invalidate();
+            }
         }
     }
 }

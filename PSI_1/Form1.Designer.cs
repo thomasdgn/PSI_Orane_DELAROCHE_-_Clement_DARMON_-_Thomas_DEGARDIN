@@ -33,18 +33,18 @@
             // 
             // panelGraph
             // 
+            this.panelGraph.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelGraph.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGraph.Location = new System.Drawing.Point(0, 0);
             this.panelGraph.Name = "panelGraph";
-            this.panelGraph.Size = new System.Drawing.Size(1879, 967);
+            this.panelGraph.Size = new System.Drawing.Size(2082, 1059);
             this.panelGraph.TabIndex = 0;
-            this.panelGraph.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGraph_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1879, 967);
+            this.ClientSize = new System.Drawing.Size(2082, 1059);
             this.Controls.Add(this.panelGraph);
             this.Name = "Form1";
             this.Text = "Form1";
