@@ -9,22 +9,23 @@ namespace PSI
 {
     public class Lien
     {
-        public Noeud a;
-        private Noeud b;
+        private Noeud Source;
+        private Noeud Destination;
+        private int Poids;
 
-        #region Propriété lecture/constructeur
+        #region Propriété constructeur/lecture/écriture
 
-        public Lien(Noeud a, Noeud b)
+        public Lien(Noeud source, Noeud destination, int poids)
         {
-            this.a = a;
-            this.b = b;
-
+            this.Source = source;
+            this.Destination = destination;
+            this.Poids = poids;
         }
         public Noeud A
         {
             get
             {
-                return this.a;
+                return this.Source;
             }
         }
 
@@ -32,9 +33,15 @@ namespace PSI
         {
             get
             {
-                return this.b;
+                return this.Destination;
             }
         }
+
+        public string ToString()
+        {
+            return $"Lien :"; 
+        }
+
         #endregion
     }
 }

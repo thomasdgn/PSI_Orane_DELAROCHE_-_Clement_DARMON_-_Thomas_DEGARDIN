@@ -8,39 +8,47 @@ namespace PSI
 {
     public class Noeud
     {
-        private int numero;
+        private int Id;
 
-        List<Noeud> voisins;
+        List<Lien> Liens;
 
-        #region Propriété lecture/constructeur
+        #region Propriété constructeur/écriture/lecture
 
-        public Noeud(int numero)
+        public Noeud(int id)
         {
-            this.numero = numero;
-            this.voisins = new List<Noeud>();
+            this.Id = id;
+            this.Liens = new List<Lien>();
 
         }
-        public int Numero
-        {
-            get
-            {
-                return this.numero;
-            }
-        }
 
-        public List<Noeud> Voisins
+        public int Numéro
         {
             get
             {
-                return this.voisins;
+                return this.Id;
             }
         }
+
+        public List<Lien> liens
+        {
+            get
+            {
+                return this.Liens;
+            }
+        }
+
         #endregion
-        public void AjouterVoisin(Noeud a)
+
+        public override string ToString()
         {
-            if (!Voisins.Contains(a))
+            return $"Noeud {Id}";
+        }
+
+        public void AjouterVoisin(Lien a)
+        {
+            if (!liens.Contains(a))
             {
-                Voisins.Add(a);
+                liens.Add(a);
             }
         }
 

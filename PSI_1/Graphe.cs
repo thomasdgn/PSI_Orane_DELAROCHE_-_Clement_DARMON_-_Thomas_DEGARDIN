@@ -9,32 +9,46 @@ namespace PSI
 {
     public class Graphe
     {
-        private List<Noeud> noeuds;
-        private List<Lien> liens;
+        private Dictionary<int, Noeud> noeuds;
 
         #region Propriété lecture/constructeur
 
-        public Graphe(List<Noeud> noeuds, List<Lien> liens)
+        public Graphe()
         {
-            this.noeuds = noeuds;
-            this.liens = liens;
-
+            noeuds = new Dictionary<int, Noeud>();
         }
-        public List<Lien> Liens
+
+        public Noeud AjouterNoeud(int id)
         {
-            get
+            if(!noeuds.ContainsKey(id))
             {
-                return this.liens;
+                noeuds[id] = new Noeud(id);
+            }
+            return noeuds[id];
+        }
+
+        public void AjouterLien(int idSource, int idDestination, int poids)
+        {
+            var source = AjouterNoeud(idSource);
+            var destination = AjouterNoeud(idDestination);
+
+            var lien = new Lien(source, destination, poids);
+            source.liens.Add(lien);
+        }
+
+        public void AfficherGraphe()
+        {
+            foreach(var noeud in noeuds.Values)
+            {
+                Console.WriteLine(noeud);
+
+                foreach(var lien in noeud.liens)
+                {
+                    Console.WriteLine(" ");
+                }
             }
         }
 
-        public List<Noeud> Noeuds
-        {
-            get
-            {
-                return this.noeuds;
-            }
-        }
         #endregion
     }
 }
