@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS livinparis;
+CREATE DATABASE IF NOT EXISTS livinparis;
+USE livinparis;
+
 CREATE TABLE Utilisateurs(
    IdUtilisateur VARCHAR(50),
    nom VARCHAR(50) NOT NULL,
