@@ -9,42 +9,17 @@
     {
         public class Lien
         {
-            private Noeud Source;
-            private Noeud Destination;
-            private int Poids;
+            private Noeud depart;
+            private Noeud arrivee;
 
-            #region Propriété constructeur/lecture/écriture
-
-            public Lien(Noeud source, Noeud destination, int poids)
+            public Noeud Depart { get { return depart; } }
+            public Noeud Arrivee { get { return arrivee; } }
+            
+            public Lien(Noeud depart, Noeud arrivee)
             {
-                this.Source = source;
-                this.Destination = destination;
-                this.Poids = poids;
+                this.depart = depart;
+                this.arrivee = arrivee;
             }
-            public Noeud source
-            {
-                get
-                {
-                    return this.Source;
-                }
-            }
-
-            public Noeud destination
-            {
-                get
-                {
-                    return this.Destination;
-                }
-            }
-
-            public string ToString()
-            {
-                return $"Lien entre {source.id} et {destination.id} avec poids {Poids}"; 
-            }
-
-            #endregion
-
-
         }
 
     }

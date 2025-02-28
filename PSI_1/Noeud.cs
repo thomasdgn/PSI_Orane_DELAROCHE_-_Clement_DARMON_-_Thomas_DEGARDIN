@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,50 +9,17 @@ namespace PSI
 {
     public class Noeud
     {
-        private int Id;
+        private int id;
+        private Point position;
 
-        List<Lien> Liens;
+        public int Id { get { return id; } }
+        public Point Position { get { return position; } }
 
-        #region Propriété constructeur/écriture/lecture
-
-        public Noeud(int id)
+        public Noeud(int id, Point position)
         {
-            this.Id = id;
-            this.Liens = new List<Lien>();
-
+            this.id = id;
+            this.position = position;
+            
         }
-
-        public int id
-        {
-            get
-            {
-                return this.Id;
-            }
-        }
-
-        public List<Lien> liens
-        {
-            get
-            {
-                return this.Liens;
-            }
-        }
-
-        #endregion
-
-        public override string ToString()
-        {
-            return $"Noeud {Id}";
-        }
-
-        public void AjouterVoisin(Lien a)
-        {
-            if (!liens.Contains(a))
-            {
-                liens.Add(a);
-            }
-        }
-
-
     }
 }

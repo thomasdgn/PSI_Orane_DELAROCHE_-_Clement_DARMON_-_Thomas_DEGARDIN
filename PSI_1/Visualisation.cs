@@ -1,60 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Text.RegularExpressions;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PSI
 {
-    public partial class Form1 : Form
+    public partial class Visualisation : Form
     {
-        private Graphe graphe;
+        private List<Noeud> noeuds;
+        private List<Lien> liens;
 
-        public Form1()
+        public Visualisation(List<Noeud> noeuds, List<Lien> liens)
         {
-            InitializeComponent();
+            this.noeuds = noeuds;
+            this.liens = liens;
+            this.Text = "Visualisation du Graphe";
+            this.Size = new Size(800, 600);
+            this.Paint += new PaintEventHandler(DessinerGraphe);
+        }
 
-            // Vérifie que panelGraph est bien ajouté
-            if (panelGraph == null)
+        private void DessinerGraphe(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Black, 2);
+            Font font = new Font("Arial", 12);
+            Brush brush = new SolidBrush(Color.Blue);
+
+            foreach (var lien in liens)
             {
-                MessageBox.Show("Erreur : panelGraph est introuvable !");
-                return;
+                g.DrawLine(pen, lien.Depart.Position, lien.Arrivee.Position);
             }
 
-            // Initialisation du graphe avec le Panel
-            graphe = new Graphe(panelGraph);
-
-            // Charger les données depuis le fichier
-            try
+            foreach (var noeud in noeuds)
             {
-                ChargerDepuisFichier("soc-karate (2).txt");
-                panelGraph.Paint += new PaintEventHandler((sender, e) => graphe.MettreAJour());
-                panelGraph.Invalidate(); // Forcer le rafraîchissement
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur lors du chargement du fichier : " + ex.Message);
+                g.FillEllipse(brush, noeud.Position.X - 10, noeud.Position.Y - 10, 20, 20);
+                g.DrawString(noeud.Id.ToString(), font, Brushes.White, noeud.Position.X - 5, noeud.Position.Y - 5);
             }
         }
 
 
-        private void ChargerDepuisFichier(string fichier)
+        private void Visualisation_Load(object sender, EventArgs e)
         {
-            string[] lignes = File.ReadAllLines(fichier);
-            Regex regex = new Regex(@"\((\d+),\s*(\d+)\)");
-
-            foreach (var ligne in lignes)
-            {
-                Match match = regex.Match(ligne);
-                if (match.Success)
-                {
-                    int idSource = int.Parse(match.Groups[1].Value);
-                    int idDestination = int.Parse(match.Groups[2].Value);
-                    graphe.AjouterLien(idSource, idDestination);
-                }
-            }
+            // Cette méthode s'exécute lorsque la fenêtre se charge
+            Console.WriteLine("Fenêtre de visualisation chargée.");
         }
     }
 }
-
