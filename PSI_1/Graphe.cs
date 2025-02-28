@@ -185,6 +185,8 @@ namespace PSI
             while (file.Count > 0)
             {
                 int sommet = file.Dequeue();
+                if (!listeAdjacence.ContainsKey(sommet)) continue;
+
                 foreach (int voisin in listeAdjacence[sommet])
                 {
                     if (!visites.Contains(voisin))
@@ -238,7 +240,8 @@ namespace PSI
 
         public void Afficher()
         {
-            Application.Run(new Visualisation(noeuds, liens));
+            Graphe graphe = new Graphe();
+            Application.Run(new Visualisation(noeuds, liens, graphe));
         }
     }
 }
