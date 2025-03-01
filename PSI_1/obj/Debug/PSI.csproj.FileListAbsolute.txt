@@ -27,3 +27,18 @@ C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_D
 C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Resources.Extensions.xml
 C:\Users\degar\OneDrive\Bureau\Projet GitHub\PSI\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Buffers.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Memory.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Numerics.Vectors.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Resources.Extensions.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\Microsoft.Msagl.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Buffers.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Memory.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Numerics.Vectors.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Resources.Extensions.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.Visualisation.resources
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.csproj.GenerateResource.cache
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.csproj.Up2Date

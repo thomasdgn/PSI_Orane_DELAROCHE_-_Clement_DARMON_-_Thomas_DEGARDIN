@@ -26,6 +26,10 @@ namespace PSI
             listeAdjacence = new Dictionary<int, List<int>>();
         }
 
+        public List<Noeud> Noeuds { get { return noeuds; } }
+        public List<Lien> Liens { get { return liens; } }
+        public Dictionary<int, List<int>> ListeAdjacence { get { return listeAdjacence; } }
+        public int[,] MatriceAdjacence { get { return matriceAdjacence; } }
 
 
         public void AjouterNoeud(int id)
