@@ -150,6 +150,13 @@ namespace PSI
                     }
                 }
             }
+
+            Console.WriteLine("Liste d'adjacence après le chargement des données :");
+            foreach (var pair in listeAdjacence)
+            {
+                Console.Write($"{pair.Key} → ");
+                Console.WriteLine(string.Join(", ", pair.Value));
+            }
         }
 
 
@@ -224,19 +231,32 @@ namespace PSI
         /// </summary>
         public bool EstConnexe()
         {
-            if (noeuds.Count == 0) return false;
+            Console.WriteLine("Vérification de la connectivité du graphe (Nombre total de nœuds : "+noeuds.Count+")");
+
+            if (noeuds.Count == 0)
+            {
+                Console.WriteLine("Le graphe ne contient aucun nœud.");
+                return false;
+            }
 
             HashSet<int> visites = new HashSet<int>();
             Queue<int> file = new Queue<int>();
 
             int premierSommet = noeuds[0].Id;
+            Console.WriteLine("Début du parcours depuis "+premierSommet);
             file.Enqueue(premierSommet);
             visites.Add(premierSommet);
 
             while (file.Count > 0)
             {
                 int sommet = file.Dequeue();
-                if (!listeAdjacence.ContainsKey(sommet)) continue;
+                Console.WriteLine("Exploration de "+sommet);
+
+                if (!listeAdjacence.ContainsKey(sommet))
+                {
+                    Console.WriteLine("Attention : "+sommet+" n'est pas dans listeAdjacence !");
+                    continue;
+                }
 
                 foreach (int voisin in listeAdjacence[sommet])
                 {
@@ -244,11 +264,16 @@ namespace PSI
                     {
                         visites.Add(voisin);
                         file.Enqueue(voisin);
+                        Console.WriteLine("Ajout du voisin "+voisin);
                     }
                 }
             }
 
+            Console.WriteLine("Nombre de nœuds visités : "+visites.Count / noeuds.Count);
+
+
             return visites.Count == noeuds.Count;
+
         }
 
 
@@ -258,20 +283,25 @@ namespace PSI
         /// </summary>
         public bool ContientCycle()
         {
+            Console.WriteLine("Vérification de la présence de cycles");
+
             HashSet<int> visites = new HashSet<int>();
 
             bool DFS(int sommet, int parent)
             {
                 visites.Add(sommet);
+                Console.WriteLine("DFS sur "+sommet+" (Parent : "+parent+")");
 
                 foreach (int voisin in listeAdjacence[sommet])
                 {
                     if (!visites.Contains(voisin))
                     {
+                        Console.WriteLine("Appel récursif sur "+voisin);
                         if (DFS(voisin, sommet)) return true;
                     }
                     else if (voisin != parent)
                     {
+                        Console.WriteLine("Cycle détecté via "+sommet+" → "+voisin);
                         return true;
                     }
                 }
@@ -282,10 +312,14 @@ namespace PSI
             {
                 if (!visites.Contains(noeud.Id))
                 {
+                    Console.WriteLine("Lancement DFS depuis "+noeud.Id);
                     if (DFS(noeud.Id, -1)) return true;
                 }
             }
+
+            Console.WriteLine("Aucun cycle détecté.");
             return false;
+
         }
 
 
