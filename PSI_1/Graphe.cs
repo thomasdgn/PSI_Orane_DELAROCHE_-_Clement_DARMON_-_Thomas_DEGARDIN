@@ -14,11 +14,29 @@ namespace PSI
 {
     public class Graphe
     {
+        /// <summary>
+        /// Liste des nœuds du graphe.
+        /// </summary>
         private List<Noeud> noeuds;
+
+        /// <summary>
+        /// Liste des liens entre les nœuds.
+        /// </summary>
         private List<Lien> liens;
+
+        /// <summary>
+        /// Dictionnaire représentant la liste d'adjacence du graphe.
+        /// </summary>
         private Dictionary<int, List<int>> listeAdjacence;
+
+        /// <summary>
+        /// Matrice d'adjacence représentant les connexions entre nœuds.
+        /// </summary>
         private int[,] matriceAdjacence;
 
+        /// <summary>
+        /// Constructeur Graphe.
+        /// </summary>
         public Graphe()
         {
             noeuds = new List<Noeud>();
@@ -26,12 +44,19 @@ namespace PSI
             listeAdjacence = new Dictionary<int, List<int>>();
         }
 
+
+        /// <summary>
+        /// Propriétés pour accéder aux attributs du graphe.
+        /// </summary>
         public List<Noeud> Noeuds { get { return noeuds; } }
         public List<Lien> Liens { get { return liens; } }
         public Dictionary<int, List<int>> ListeAdjacence { get { return listeAdjacence; } }
         public int[,] MatriceAdjacence { get { return matriceAdjacence; } }
 
 
+        /// <summary>
+        /// Ajoute un nœud au graphe.
+        /// </summary>
         public void AjouterNoeud(int id)
         {
             if (listeAdjacence.ContainsKey(id) == false)
@@ -43,6 +68,9 @@ namespace PSI
         }
 
 
+        /// <summary>
+        /// Ajoute un lien entre deux nœuds du graphe.
+        /// </summary>
         public void AjouterLien(int id1, int id2)
         {
             Noeud noeud1 = noeuds.Find(n => n.Id == id1);
@@ -57,6 +85,9 @@ namespace PSI
         }
 
 
+        /// <summary>
+        /// Organise les nœuds en cercle pour une meilleure visualisation.
+        /// </summary>
         public void OrganiserEnCercle()
         {
             int rayon = 250;
@@ -80,6 +111,9 @@ namespace PSI
         }
 
 
+        /// <summary>
+        /// Construit la matrice d'adjacence du graphe.
+        /// </summary>
         public void ConstructionMatriceAdjacence()
         {
             int taille = noeuds.Count;
@@ -96,6 +130,9 @@ namespace PSI
         }
 
 
+        /// <summary>
+        /// Charge les données d'un fichier texte et remplit le graphe.
+        /// </summary>
         public void ChargerLesDonneesDuFichier(string chemin)
         {
             foreach (string line in File.ReadLines(chemin))
@@ -116,6 +153,9 @@ namespace PSI
         }
 
 
+        /// <summary>
+        /// Effectue un parcours en largeur à partir d'un sommet donné.
+        /// </summary>
         public void ParcoursLargeur(int sommetDepart)
         {
             if (listeAdjacence.ContainsKey(sommetDepart) == false) return;
@@ -144,6 +184,9 @@ namespace PSI
         }
 
 
+        /// <summary>
+        /// Effectue un parcours en profondeur à partir d'un sommet donné.
+        /// </summary>
         public void ParcoursProfondeur(int sommetDepart)
         {
             if (listeAdjacence.ContainsKey(sommetDepart) == false) return;
@@ -175,6 +218,10 @@ namespace PSI
         }
 
 
+
+        /// <summary>
+        /// Vérifie si le graphe est connexe.
+        /// </summary>
         public bool EstConnexe()
         {
             if (noeuds.Count == 0) return false;
@@ -205,6 +252,10 @@ namespace PSI
         }
 
 
+
+        /// <summary>
+        /// Vérifie si le graphe contient un cycle.
+        /// </summary>
         public bool ContientCycle()
         {
             HashSet<int> visites = new HashSet<int>();
@@ -242,6 +293,10 @@ namespace PSI
         public int ObtenirTaille() => liens.Count;
 
 
+
+        /// <summary>
+        /// Affiche le Windows Forms.
+        /// </summary>
         public void Afficher()
         {
             Graphe graphe = new Graphe();
