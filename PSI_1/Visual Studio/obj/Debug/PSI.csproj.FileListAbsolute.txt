@@ -42,3 +42,25 @@ C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Tho
 C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.Visualisation.resources
 C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.csproj.GenerateResource.cache
 C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\PSI_1\obj\Debug\PSI.csproj.Up2Date
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\PSI.exe.config
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\PSI.exe
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\PSI.pdb
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\Microsoft.Msagl.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Buffers.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Memory.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Numerics.Vectors.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Resources.Extensions.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\Microsoft.Msagl.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Buffers.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Memory.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Numerics.Vectors.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Resources.Extensions.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.csproj.AssemblyReference.cache
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.Visualisation.resources
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.csproj.GenerateResource.cache
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.csproj.CoreCompileInputs.cache
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.csproj.Up2Date
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.exe
+C:\A2 ESILV\SEMESTRE2\PB SCIENTIFIQUE\PSI_Orane_DELAROCHE_-_Clement_DARMON_-_Thomas_DEGARDIN\Visual Studio\obj\Debug\PSI.pdb
